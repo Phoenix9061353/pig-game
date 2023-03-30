@@ -13,3 +13,7 @@
 ## 練習內容
 
 JavaScript 對 DOM Event 的使用練習
+
+## 自行增加內容
+
+加入「How to play」按鈕，按下後即可查看玩法說明
