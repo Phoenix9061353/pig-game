@@ -8,7 +8,7 @@
     <title>Pig Game</title>
   </head>
   <body>
-    <main>
+    <main id="main">
       <section class="player player--0 player--active">
         <h2 class="name" id="name--0">Player 1</h2>
         <p class="score" id="score--0">43</p>
@@ -31,6 +31,35 @@
       <button class="btn btn--roll">🎲 Roll dice</button>
       <button class="btn btn--hold">📥 Hold</button>
     </main>
+    <a href="#rule" class="btn btn--toggle">how to play?</a>
+    <div class="rule" id="rule">
+      <div class="rule__content">
+        <a href="#main" class="rule__close">&times;</a>
+        <h3 class="rule__header">玩法說明：</h3>
+        <ul class="rule__list">
+          <li class="rule__things">開場時，由Player 1先擲骰子</li>
+          <li class="rule__things">在「Player」下方的數字為總分數</li>
+          <li class="rule__things">
+            在「Current」欄位中的數字為該局擲骰子的點數總和
+          </li>
+          <li class="rule__things">玩家在擲骰子時，會遇到以下幾種情況：</li>
+          <ul class="extra__list">
+            <li class="extra__things">
+              點數為「1」的場合：<br />系統會直接將擲骰權交給另一方，並將「Current」欄位中的分數歸零，不予計分
+            </li>
+            <li class="extra__things">
+              點數不是「1」的場合：<br />系統會將所擲出的點數累加至「Current」欄位中的分數
+            </li>
+          </ul>
+          <li class="rule__things">
+            玩家在握有擲骰權時，可隨時按下「Hold」，將當前「Current」欄位中的分數加至總分，但同時也會交出擲骰權給對方玩家
+          </li>
+          <li class="rule__things">最終總分先達到30分者勝出該場遊戲</li>
+          <li class="rule__things">按下「New Game」可重啟遊戲</li>
+        </ul>
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
